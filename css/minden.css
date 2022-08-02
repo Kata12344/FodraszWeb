@@ -1,6 +1,8 @@
 body{
     background-color: rgb(251, 246, 247);
     font-family: 'Lora', serif;
+    width: 80%;
+    margin: auto;
 }
 
 /* nav */
