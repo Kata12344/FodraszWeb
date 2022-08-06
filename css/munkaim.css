@@ -10,19 +10,10 @@
 .tarolo{
     position: relative;
     width: 400px;
-    margin: auto;
-    
 }
 
-.elottekep{
-    border-radius: 15px;
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 10px;
-}
 
-.utanakep{
+.elottekep, .utanakep{
     border-radius: 15px;
     display: block;
     width: 100%;
@@ -36,8 +27,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: rgb(251, 246, 247);
@@ -49,14 +38,15 @@
 
 @media(max-width: 650px){
     .elotte-utana{
-        flex-direction: column
-    }
-    .tarolo{
-        width: auto;
+        flex-direction: column;
+        text-align: left;
     }
     .slideshow-tarolo{
         width: auto;
-    }   
+    }
+    .slideshow-tarolo>.slide.fade{
+        width: auto;
+    }
 }
 
 /* Slideshow */
@@ -74,8 +64,6 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
     padding: 16px;
     color: white;
     font-weight: bold;
@@ -147,10 +135,21 @@
     max-width: 300px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .oszlop {
       flex: 100%;
       max-width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
     }
-    
+    .oszlop>img {
+        height: max-content;
+    }
+}
+
+@media screen and (max-width:650px){
+    .oszlop{
+        flex-direction: column;
+    }
 }
